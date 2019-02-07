@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${titulo}</title>
+</head>
+<body>
+<h1>Lista de estudiantes</h1>
+<table border=1>
+    <#list est as Estudiante>
+    <tr><td>${est.matricula}<td>${est.nombre}<td>${est.apellido}<td>${est.telefono}
+            </#list>
+</table>
+</body>
+</html>
