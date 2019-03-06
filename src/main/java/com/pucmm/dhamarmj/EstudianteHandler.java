@@ -43,7 +43,7 @@ public class EstudianteHandler {
         }, freeMarkerEngine);
 
         get("/editarEstudiante/:matricula", (request, response) -> {
-            FindStudent(Integer.parseInt(request.params("matricula")));
+                FindStudent(Integer.parseInt(request.params("matricula")));
             Estudiante est = currentEst;
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("titulo", "Actualizar Estudiante");
@@ -65,7 +65,7 @@ public class EstudianteHandler {
         post("/guardarEstudiante/", (request, response) -> {
 
             Estudiante estudiante= new Estudiante(
-                        Integer.parseInt(request.queryParams("matricula")),
+                            Integer.parseInt(request.queryParams("matricula")),
                         request.queryParams("nombre") ,
                         request.queryParams("apellido") ,
                         request.queryParams("telefono"));
